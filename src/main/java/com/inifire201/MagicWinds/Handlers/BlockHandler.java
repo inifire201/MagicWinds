@@ -1,8 +1,6 @@
 package com.inifire201.MagicWinds.Handlers;
 
-import com.inifire201.MagicWinds.Blocks.BlockShardOreGreen;
-import com.inifire201.MagicWinds.Blocks.BlockShardOreOrange;
-import com.inifire201.MagicWinds.Blocks.BlockTestBlock;
+import com.inifire201.MagicWinds.Blocks.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -24,6 +22,10 @@ public class BlockHandler {
     public static ItemBlock ibshard_ore_orange;
     public static Block shard_ore_green;
     public static ItemBlock ibshard_ore_green;
+    public static Block shard_ore_white;
+    public static ItemBlock ibshard_ore_white;
+    public static Block shard_ore_purple;
+    public static ItemBlock ibshard_ore_purple;
 
     public static void init(){
         test_block = new BlockTestBlock(Material.ROCK, "test_block", CreativeTabHandler.tabMW, 5f, 15f, 3, "pickaxe");
@@ -32,6 +34,10 @@ public class BlockHandler {
         ibshard_ore_orange = new ItemBlock(shard_ore_orange);
         shard_ore_green = new BlockShardOreGreen(Material.WOOD, "shard_ore_green", CreativeTabHandler.tabMW, 4f, 10f, 2, "axe");
         ibshard_ore_green = new ItemBlock(shard_ore_green);
+        shard_ore_white = new BlockShardOreWhite(Material.ROCK, "shard_ore_white", CreativeTabHandler.tabMW, 4f, 10f, 2, "pickaxe" );
+        ibshard_ore_white = new ItemBlock(shard_ore_white);
+        shard_ore_purple = new BlockShardOrePurple(Material.ROCK, "shard_ore_purple", CreativeTabHandler.tabMW, 4f, 10f, 2, "pickaxe" );
+        ibshard_ore_purple = new ItemBlock(shard_ore_purple);
     }
 
     public static void register(){
