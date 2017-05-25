@@ -1,8 +1,6 @@
 package com.inifire201.MagicWinds.Handlers;
 
-import com.inifire201.MagicWinds.Items.ItemShardGreen;
-import com.inifire201.MagicWinds.Items.ItemShardOrange;
-import com.inifire201.MagicWinds.Items.ItemTestItem;
+import com.inifire201.MagicWinds.Items.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -17,11 +15,16 @@ public class ItemHandler {
     public static Item testItem;
     public static Item orangeShard;
     public static Item greenShard;
+    public static Item whiteShard;
+    public static Item purpleShard;
+
 
     public static void init(){
         testItem = new ItemTestItem("test_item", CreativeTabHandler.tabMW);
         orangeShard = new ItemShardOrange("orange_shard", CreativeTabHandler.tabMW, 16);
         greenShard = new ItemShardGreen("green_shard", CreativeTabHandler.tabMW, 16);
+        whiteShard = new ItemShardWhite("white_shard", CreativeTabHandler.tabMW, 16);
+        purpleShard = new ItemShardPurple("purple_shard", CreativeTabHandler.tabMW, 16);
     }
 
     public static void register(){
