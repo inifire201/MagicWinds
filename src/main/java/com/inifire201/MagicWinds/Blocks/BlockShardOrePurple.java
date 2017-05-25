@@ -19,7 +19,7 @@ public class BlockShardOrePurple extends BlockShardOre{
     @SuppressWarnings("NullableProblems")
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-        return ItemHandler.puprleShard;
+        return ItemHandler.purpleShard;
     }
 
 
