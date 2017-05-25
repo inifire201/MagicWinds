@@ -1,0 +1,11 @@
+//Blocks
+tile.test_block.name=Mistical Ore
+
+//Items
+item.test_item.name=Mistical Magic
+
+//tools
+item.test_sword.name=Mistical Sword
+
+//Tabs
+itemGroup.mw= Magic Winds

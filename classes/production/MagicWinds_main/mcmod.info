@@ -1,0 +1,16 @@
+[
+{
+  "modid": "mw",
+  "name": "MagicWinds",
+  "description": "A mod full of Magic",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["inifire201", "buttercops"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
