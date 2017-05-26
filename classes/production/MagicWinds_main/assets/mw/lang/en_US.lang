@@ -1,8 +1,11 @@
 //Blocks
 tile.test_block.name=Mistical Ore
+tile.shard_ore_green.name=Green Crystal Ore
+tile.shard_ore_orange.name=Orange Crystal Ore
 
 //Items
 item.test_item.name=Mistical Magic
+item.orange_shard.name=Orange Crystal
 
 //tools
 item.test_sword.name=Mistical Sword
