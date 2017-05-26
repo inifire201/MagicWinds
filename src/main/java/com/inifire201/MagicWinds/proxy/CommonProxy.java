@@ -25,7 +25,6 @@ public class CommonProxy implements IProxy {
 
     @Override
     public void init() {
-        System.out.println("mw:CommonProxy init()");
         GameRegistry.registerWorldGenerator( new ModWorldGen(),0);
     }
 
