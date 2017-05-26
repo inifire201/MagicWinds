@@ -7,6 +7,7 @@ import com.inifire201.MagicWinds.Handlers.ItemHandler;
 import com.inifire201.MagicWinds.Handlers.ToolHandler;
 import com.inifire201.MagicWinds.World.ModWorldGen;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import com.inifire201.MagicWinds.Handlers.*;
 
 /**
  * Created by Rob de Witte on 22-5-2017.
