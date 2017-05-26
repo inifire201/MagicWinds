@@ -19,6 +19,7 @@ public class CommonProxy implements IProxy {
     }
 
     public void init() {
+        System.out.println("mw:CommonProxy init()");
         WorldGenHandler.register();
     }
 
