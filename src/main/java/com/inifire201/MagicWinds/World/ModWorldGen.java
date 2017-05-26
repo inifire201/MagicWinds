@@ -1,6 +1,7 @@
 package com.inifire201.MagicWinds.World;
 
 import com.inifire201.MagicWinds.Handlers.BlockHandler;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraft.world.chunk.IChunkProvider;
@@ -21,15 +22,26 @@ public class ModWorldGen implements IWorldGenerator {
             case -1:
                 break;
             case 0:
+                this.runGenerator(this.gen_green_shard_ore, world, random, chunkX, chunkZ, 20,0, 60);
                 break;
             case 1:
                 break;
         }
     }
 
+    private WorldGenerator gen_green_shard_ore;
+
     public ModWorldGen() {
         this.gen_green_shard_ore = new WorldGenMinable(BlockHandler.shard_ore_green.getDefaultState(), 4);
     }
 
-    private void runGenerator(WorldGenerator generator, World world, Random random, int chunkX)
+    private void runGenerator(WorldGenerator generator, World world, Random random, int chunkX, int chunkZ, int Veins, int minY, int maxY){
+        int diffY = maxY - minY + 1;
+            for(int i=0; i<Veins; i++){
+                int x = chunkX*16 + random.nextInt(16);
+                int y = minY +random.nextInt(diffY);
+                int z = chunkZ*16 + random.nextInt(16);
+                generator.generate(world, random, new BlockPos(x,y,z));
+            }
+    }
 }
