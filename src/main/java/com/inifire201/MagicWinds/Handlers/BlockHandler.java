@@ -46,13 +46,19 @@ public class BlockHandler {
         GameRegistry.register(shard_ore_orange);
         GameRegistry.register(ibshard_ore_orange, shard_ore_orange.getRegistryName());
         GameRegistry.register(shard_ore_green);
-        GameRegistry.register(ibshard_ore_green,shard_ore_green.getRegistryName());
+        GameRegistry.register(ibshard_ore_green, shard_ore_green.getRegistryName());
+        GameRegistry.register(shard_ore_white);
+        GameRegistry.register(ibshard_ore_white, shard_ore_white.getRegistryName());
+        GameRegistry.register(shard_ore_purple);
+        GameRegistry.register(ibshard_ore_purple, shard_ore_purple.getRegistryName());
     }
 
     public static void registerRenders(){
         registerRender(test_block);
         registerRender(shard_ore_orange);
         registerRender(shard_ore_green);
+        registerRender(shard_ore_white);
+        registerRender(shard_ore_purple);
     }
 
     public static void registerRender(Block block){
