@@ -8,7 +8,7 @@ import com.inifire201.MagicWinds.Handlers.*;
  * Package com.inifire201.MagicWinds.proxy.
  */
 public class CommonProxy implements IProxy {
-
+    @Override
     public void preInit() {
         ItemHandler.init();
         ItemHandler.register();
@@ -18,6 +18,7 @@ public class CommonProxy implements IProxy {
         ToolHandler.register();
     }
 
+    @Override
     public void init() {
         System.out.println("mw:CommonProxy init()");
         WorldGenHandler.register();

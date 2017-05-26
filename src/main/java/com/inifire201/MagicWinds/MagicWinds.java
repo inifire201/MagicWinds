@@ -15,7 +15,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 @Mod(modid = Ref.MODID, version = Ref.VERSION, name = Ref.NAME )
 public class MagicWinds {
 
-    @SidedProxy(clientSide = Ref.CLIENT_PROXY, serverSide = Ref.SERVER_PROXY,modId = Ref.MODID)
+    @SidedProxy(clientSide = Ref.CLIENT_PROXY, serverSide = Ref.SERVER_PROXY)
     public static IProxy proxy;
 
     @EventHandler
