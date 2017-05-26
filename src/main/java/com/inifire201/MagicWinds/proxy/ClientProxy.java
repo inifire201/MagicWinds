@@ -10,8 +10,9 @@ import com.inifire201.MagicWinds.Handlers.ToolHandler;
  */
 public class ClientProxy extends CommonProxy {
 
-    @Override
+    
     public void init(){
+        System.out.println("mw:ClientProxy init()");
         ItemHandler.registerRenders();
         BlockHandler.registerRenders();
         ToolHandler.registerRenders();
