@@ -36,7 +36,7 @@ public class BlockHandler {
         ibshard_ore_green = new ItemBlock(shard_ore_green);
         shard_ore_white = new BlockShardOreWhite(Material.ROCK, "shard_ore_white", CreativeTabHandler.tabMW, 4f, 10f, 2, "pickaxe" );
         ibshard_ore_white = new ItemBlock(shard_ore_white);
-        shard_ore_purple = new BlockShardOrePurple(Material.ROCK, "shard_ore_purple.json", CreativeTabHandler.tabMW, 4f, 10f, 2, "pickaxe" );
+        shard_ore_purple = new BlockShardOrePurple(Material.ROCK, "shard_ore_purple", CreativeTabHandler.tabMW, 4f, 10f, 2, "pickaxe" );
         ibshard_ore_purple = new ItemBlock(shard_ore_purple);
     }
 
