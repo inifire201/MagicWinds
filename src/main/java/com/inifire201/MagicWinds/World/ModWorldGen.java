@@ -25,14 +25,29 @@ public class ModWorldGen implements IWorldGenerator {
                 this.runGenerator(this.gen_green_shard_ore, world, random, chunkX, chunkZ, 20,0, 60);
                 break;
             case 1:
+                this.runGenerator(this.gen_white_shard_ore, world, random, chunkX, chunkZ, 20,0, 60);
+                break;
+            case 1:
+                this.runGenerator(this.gen_orange_shard_ore, world, random, chunkX, chunkZ, 20,0, 60);
+                break;
+            case 1:
+                this.runGenerator(this.gen_purple_shard_ore, world, random, chunkX, chunkZ, 20,0, 60);
+                break;
+            case 1:
                 break;
         }
     }
 
     private WorldGenerator gen_green_shard_ore;
+    private WorldGenerator gen_white_shard_ore;
+    private WorldGenerator gen_orange_shard_ore;
+    private WorldGenerator gen_purple_shard_ore;
 
     public ModWorldGen() {
         this.gen_green_shard_ore = new WorldGenMinable(BlockHandler.shard_ore_green.getDefaultState(), 4);
+        this.gen_orange_shard_ore = new WorldGenMinable(BlockHandler.shard_ore_orange.getDefaultState(), 4);
+        this.gen_white_shard_ore = new WorldGenMinable(BlockHandler.shard_ore_white.getDefaultState(), 4);
+        this.gen_purple_shard_ore = new WorldGenMinable(BlockHandler.shard_ore_purple.getDefaultState(), 4);
     }
 
     private void runGenerator(WorldGenerator generator, World world, Random random, int chunkX, int chunkZ, int Veins, int minY, int maxY){
