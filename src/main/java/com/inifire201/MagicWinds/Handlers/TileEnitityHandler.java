@@ -1,6 +1,6 @@
 package com.inifire201.MagicWinds.Handlers;
 
-import com.inifire201.MagicWinds.TileEntities.TestTileEntity;
+import com.inifire201.MagicWinds.TileEntities.TileEntityTrinketMaker;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
@@ -10,6 +10,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class TileEnitityHandler{
 
     public static void register(){
-        GameRegistry.registerTileEntity(TestTileEntity.class, "test_tile_entity");
+        GameRegistry.registerTileEntity(TileEntityTrinketMaker.class, BlockHandler.trinket_maker.getLocalizedName());
     }
 }

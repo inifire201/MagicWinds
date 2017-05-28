@@ -1,7 +1,7 @@
 package com.inifire201.MagicWinds.Handlers;
 
 import com.inifire201.MagicWinds.Blocks.*;
-import com.inifire201.MagicWinds.TileEntities.TileEntityTestTileEntity;
+import com.inifire201.MagicWinds.TileEntities.BlockTrinketMaker;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -19,6 +19,7 @@ public class BlockHandler {
 
     public static Block test_block;
     public static ItemBlock ibTest_Block;
+
     public static Block shard_ore_orange;
     public static ItemBlock ibshard_ore_orange;
     public static Block shard_ore_green;
@@ -27,12 +28,14 @@ public class BlockHandler {
     public static ItemBlock ibshard_ore_white;
     public static Block shard_ore_purple;
     public static ItemBlock ibshard_ore_purple;
-    public static Block testTileEntity;
-    public static ItemBlock ibTestTileEntity;
+
+    public static Block trinket_maker;
+    public static ItemBlock ibtrinket_maker;
 
     public static void init(){
         test_block = new BlockTestBlock(Material.ROCK, "test_block", CreativeTabHandler.tabMW, 5f, 15f, 3, "pickaxe");
         ibTest_Block =  new ItemBlock(test_block);
+
         shard_ore_orange = new BlockShardOreOrange(Material.ROCK, "shard_ore_orange", CreativeTabHandler.tabMW, 4f, 10f, 2,"pickaxe");
         ibshard_ore_orange = new ItemBlock(shard_ore_orange);
         shard_ore_green = new BlockShardOreGreen(Material.WOOD, "shard_ore_green", CreativeTabHandler.tabMW, 4f, 10f, 2, "axe");
@@ -41,13 +44,16 @@ public class BlockHandler {
         ibshard_ore_white = new ItemBlock(shard_ore_white);
         shard_ore_purple = new BlockShardOrePurple(Material.ROCK, "shard_ore_purple", CreativeTabHandler.tabMW, 4f, 10f, 2, "pickaxe" );
         ibshard_ore_purple = new ItemBlock(shard_ore_purple);
-        testTileEntity = new TileEntityTestTileEntity(Material.WOOD, "test_tile_entity", CreativeTabHandler.tabMW, 3f, 5f, 1, "pickaxe", true);
-        ibTestTileEntity = new ItemBlock(testTileEntity);
+
+
+        trinket_maker = new BlockTrinketMaker(Material.WOOD, "trinket_maker", CreativeTabHandler.tabMW, 4f, 10f, 3,"axe", true);
+        ibtrinket_maker = new ItemBlock(trinket_maker);
     }
 
     public static void register(){
         GameRegistry.register(test_block);
         GameRegistry.register(ibTest_Block, test_block.getRegistryName());
+
         GameRegistry.register(shard_ore_orange);
         GameRegistry.register(ibshard_ore_orange, shard_ore_orange.getRegistryName());
         GameRegistry.register(shard_ore_green);
@@ -56,8 +62,10 @@ public class BlockHandler {
         GameRegistry.register(ibshard_ore_white, shard_ore_white.getRegistryName());
         GameRegistry.register(shard_ore_purple);
         GameRegistry.register(ibshard_ore_purple, shard_ore_purple.getRegistryName());
-        GameRegistry.register(testTileEntity);
-        GameRegistry.register(ibTestTileEntity, testTileEntity.getRegistryName());
+
+
+        GameRegistry.register(trinket_maker);
+        GameRegistry.register(ibtrinket_maker, trinket_maker.getRegistryName());
     }
 
     public static void registerRenders(){
@@ -66,7 +74,7 @@ public class BlockHandler {
         registerRender(shard_ore_green);
         registerRender(shard_ore_white);
         registerRender(shard_ore_purple);
-        registerRender(testTileEntity);
+        registerRender(trinket_maker);
     }
 
     public static void registerRender(Block block){

@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "normal": { "model": "mw:trinket_maker" },
+        "facing=north":{"model":"mw:trinket_maker"},
+        "facing=east":{"model":"mw:trinket_maker", "y":90},
+        "facing=south":{"model":"mw:trinket_maker","y":180},
+        "facing=west":{"model":"mw:trinket_maker","y":270},
+        "facing=up":{"model":"mw:trinket_maker", "x":180},
+        "facing=down":{"model":"mw:trinket_maker","x":90}
+
+    }
+}
