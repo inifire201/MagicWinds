@@ -22,19 +22,14 @@ public class ModWorldGen implements IWorldGenerator {
             case -1:
                 break;
             case 0:
-                this.runGenerator(this.gen_green_shard_ore, world, random, chunkX, chunkZ, 20,0, 60);
                 break;
             case 1:
                 this.runGenerator(this.gen_white_shard_ore, world, random, chunkX, chunkZ, 20,0, 60);
-                break;
-            case 1:
-                this.runGenerator(this.gen_orange_shard_ore, world, random, chunkX, chunkZ, 20,0, 60);
-                break;
-            case 1:
                 this.runGenerator(this.gen_purple_shard_ore, world, random, chunkX, chunkZ, 20,0, 60);
+                this.runGenerator(this.gen_orange_shard_ore, world, random, chunkX, chunkZ, 20,0, 60);
+                this.runGenerator(this.gen_green_shard_ore, world, random, chunkX, chunkZ, 20,0, 60);
                 break;
-            case 1:
-                break;
+
         }
     }
 
