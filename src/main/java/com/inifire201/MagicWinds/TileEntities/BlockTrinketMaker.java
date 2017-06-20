@@ -17,7 +17,7 @@ import net.minecraft.world.World;
 public class BlockTrinketMaker extends ModBlockTileEntity{
 
 
-    public static final PropertyDirection FACING = PropertyDirection.create("facing");
+//    public static final PropertyDirection FACING = PropertyDirection.create("facing");
 
     public BlockTrinketMaker(Material mat, String name, CreativeTabs tab, float hardness, float resistance, int harvest, String tool, boolean isContainer) {
         super(mat, name, tab, hardness, resistance, harvest, tool, isContainer);
@@ -31,6 +31,14 @@ public class BlockTrinketMaker extends ModBlockTileEntity{
     @Override
     public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
  //       worldIn.setBlockState(pos, state.withProperty(FACING, EnumFacing.getDirectionFromEntityLiving(pos, placer)), 2);
+        if (stack.hasDisplayName()){
+            ((TileEntityTrinketMaker)worldIn.getTileEntity(pos)).setCustomName(stack.getDisplayName());
+        }
     }
 
+    @Override
+    public void breakBlock(World world, BlockPos pos, IBlockState state) {
+        TileEntityTrinketMaker te = (TileEntityTrinketMaker) world.getTileEntity(pos);
+        super.breakBlock(world, pos, state);
+    }
 }

@@ -19,6 +19,7 @@ public class ItemHandler {
     public static Item purpleShard;
 
     public static Item testRing;
+    public static Item redRing;
 
     public static void init(){
         testItem = new ItemTestItem("test_item", CreativeTabHandler.tabMW);
@@ -29,6 +30,7 @@ public class ItemHandler {
         purpleShard = new ItemShardPurple("purple_shard", CreativeTabHandler.tabMW, 16);
 
         testRing = new ItemTestRing("test_ring", CreativeTabHandler.tabMW, 1);
+        redRing = new ItemRedRing("red_ring", CreativeTabHandler.tabMW, 4);
 
     }
 
@@ -41,6 +43,7 @@ public class ItemHandler {
         GameRegistry.register(purpleShard);
 
         GameRegistry.register(testRing);
+        GameRegistry.register(redRing);
 
     }
 
@@ -53,6 +56,7 @@ public class ItemHandler {
         registerRender(purpleShard);
 
         registerRender(testRing);
+        registerRender(redRing);
     }
 
     public static void registerRender(Item item){
