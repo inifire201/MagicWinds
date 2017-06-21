@@ -14,7 +14,7 @@ public class CraftingHandler {
     public static void init(){
         GameRegistry.addRecipe(new ItemStack(ToolHandler.testSword, 1), " X ", " X ", " C ", 'X', ItemHandler.testItem, 'C', Items.STICK);
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(BlockHandler.trinket_maker, 1), "FSI", "LBL", "LEL", 'F', Items.FLINT, 'S', Items.STICK, 'I', Items.IRON_INGOT, 'L',"logWood", 'B', Blocks.IRON_BLOCK, 'E', Items.EMERALD));
-
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ItemHandler.redRing, 1), " S ", "SBS", " S ", 'S', ItemHandler.orangeShard, 'B', Items.BLAZE_POWDER));
 
     }
 }
