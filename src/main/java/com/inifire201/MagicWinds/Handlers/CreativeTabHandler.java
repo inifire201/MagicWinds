@@ -11,6 +11,8 @@ import net.minecraft.item.ItemStack;
 public class CreativeTabHandler {
     public static CreativeTabs tabMW = new CreativeTabs("mw") {
 
+
+
         public ItemStack getTabIconItem() {
             return new ItemStack(Item.getItemFromBlock(BlockHandler.test_block));
         }

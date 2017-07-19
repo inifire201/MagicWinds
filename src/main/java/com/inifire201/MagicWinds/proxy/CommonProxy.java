@@ -1,7 +1,6 @@
 package com.inifire201.MagicWinds.proxy;
 
 
-import com.inifire201.MagicWinds.Handlers.*;
 import com.inifire201.MagicWinds.World.ModWorldGen;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -12,15 +11,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class CommonProxy implements IProxy {
     @Override
     public void preInit() {
-        ItemHandler.init();
-        ItemHandler.register();
-        BlockHandler.init();
-        BlockHandler.register();
-        ToolHandler.init();
-        ToolHandler.register();
-        TileEnitityHandler.register();
-        EnchantingHandler.init();
-        EnchantingHandler.register();
+
     }
 
     @Override
@@ -30,6 +21,6 @@ public class CommonProxy implements IProxy {
 
     @Override
     public void postInit() {
-        CraftingHandler.init();
+
     }
 }

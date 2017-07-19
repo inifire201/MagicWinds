@@ -1,0 +1,20 @@
+{
+  "type":"forge:ore_shaped",
+  "pattern":[
+    " X ",
+    " X ",
+    " I "
+  ],
+  "key":{
+    "X":{
+      "item":"mw:test_item"
+    },
+    "I":{
+      "type": "forge:ore_dict",
+      "ore": "stickwood"
+    }
+  },
+  "result":{
+    "item": "mw:test_sword"
+  }
+}

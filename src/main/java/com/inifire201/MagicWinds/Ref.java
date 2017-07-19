@@ -15,3 +15,14 @@ public class Ref {
     public static final String SERVER_PROXY = "com.inifire201.MagicWinds.proxy.ServerProxy" +
             "";
 }
+/*
+    Items:
+    mw:test_item
+
+
+
+
+
+
+
+ */
