@@ -36,13 +36,13 @@ public class BlockHandler {
         test_block = new BlockTestBlock(Material.ROCK, "test_block", CreativeTabHandler.tabMW, 5f, 15f, 3, "pickaxe");
         ibTest_Block =  new ItemBlock(test_block);
 
-        shard_ore_orange = new BlockShardOreOrange(Material.ROCK, "shard_ore_orange", CreativeTabHandler.tabMW, 4f, 10f, 2,"pickaxe");
+        shard_ore_orange = new BlockShardOre(Material.ROCK, "shard_ore_orange", CreativeTabHandler.tabMW, 4f, 10f, 2,"pickaxe", ItemHandler.orangeShard, "orange");
         ibshard_ore_orange = new ItemBlock(shard_ore_orange);
-        shard_ore_green = new BlockShardOreGreen(Material.WOOD, "shard_ore_green", CreativeTabHandler.tabMW, 4f, 10f, 2, "axe");
+        shard_ore_green = new BlockShardOre(Material.WOOD, "shard_ore_green", CreativeTabHandler.tabMW, 4f, 10f, 2, "axe", ItemHandler.greenShard, "green");
         ibshard_ore_green = new ItemBlock(shard_ore_green);
-        shard_ore_white = new BlockShardOreWhite(Material.ROCK, "shard_ore_white", CreativeTabHandler.tabMW, 4f, 10f, 2, "pickaxe" );
+        shard_ore_white = new BlockShardOre(Material.ROCK, "shard_ore_white", CreativeTabHandler.tabMW, 4f, 10f, 2, "pickaxe" ,ItemHandler.whiteShard, "white");
         ibshard_ore_white = new ItemBlock(shard_ore_white);
-        shard_ore_purple = new BlockShardOrePurple(Material.ROCK, "shard_ore_purple", CreativeTabHandler.tabMW, 4f, 10f, 2, "pickaxe" );
+        shard_ore_purple = new BlockShardOre(Material.ROCK, "shard_ore_purple", CreativeTabHandler.tabMW, 4f, 10f, 2, "pickaxe" , ItemHandler.purpleShard, "purple");
         ibshard_ore_purple = new ItemBlock(shard_ore_purple);
 
 

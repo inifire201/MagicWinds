@@ -2,11 +2,7 @@ package com.inifire201.MagicWinds.Items;
 
 import baubles.api.BaubleType;
 import baubles.api.IBauble;
-import com.inifire201.MagicWinds.Handlers.ItemHandler;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 /**

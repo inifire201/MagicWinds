@@ -12,6 +12,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  */
 public class ItemHandler {
 
+    public static Item debugItem;
     public static Item testItem;
     public static Item orangeShard;
     public static Item greenShard;
@@ -23,6 +24,7 @@ public class ItemHandler {
 
     public static void init(){
         testItem = new ItemTestItem("test_item", CreativeTabHandler.tabMW);
+        debugItem = new ItemDebug("debug", CreativeTabHandler.tabMW);
 
         orangeShard = new ItemShardOrange("orange_shard", CreativeTabHandler.tabMW, 16);
         greenShard = new ItemShardGreen("green_shard", CreativeTabHandler.tabMW, 16);
@@ -36,6 +38,7 @@ public class ItemHandler {
 
     public static void register(){
         GameRegistry.register(testItem);
+        GameRegistry.register(debugItem);
 
         GameRegistry.register(orangeShard);
         GameRegistry.register(greenShard);

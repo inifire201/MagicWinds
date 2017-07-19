@@ -19,6 +19,8 @@ public class CommonProxy implements IProxy {
         ToolHandler.init();
         ToolHandler.register();
         TileEnitityHandler.register();
+        EnchantingHandler.init();
+        EnchantingHandler.register();
     }
 
     @Override
