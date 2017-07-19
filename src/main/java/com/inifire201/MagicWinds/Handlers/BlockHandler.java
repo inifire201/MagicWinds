@@ -8,8 +8,10 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
@@ -25,6 +27,7 @@ import java.util.List;
 @Mod.EventBusSubscriber(modid = Ref.MODID)
 public class BlockHandler {
     public static List<Block> BLOCKS = new ArrayList<Block>();
+    public static List<Item> ITEMBLOCKS = new ArrayList<Item>();
 
     public static Block test_block = new BlockTestBlock(Material.ROCK, "test_block", CreativeTabHandler.tabMW, 5f, 15f, 3, "pickaxe");
 
@@ -35,12 +38,10 @@ public class BlockHandler {
 
     public static Block trinket_maker = new BlockTrinketMaker(Material.WOOD, "trinket_maker", CreativeTabHandler.tabMW, 4f, 10f, 3,"axe", true);
 
-    //-------------------
 
-    //TODO Fix this, error: nullpointer exeption. added blocks are null
-/*
+    //TODO Fix this, error: nullpointer exeption. added blocks are null.
     @SubscribeEvent
-    public static void registerItemBlocks(RegistryEvent.Register<Item> event){
+    public static void registerBlocks(RegistryEvent.Register<Block> event){
         BLOCKS.add(test_block);
 
         BLOCKS.add(shard_ore_green);
@@ -49,12 +50,28 @@ public class BlockHandler {
         BLOCKS.add(shard_ore_white);
 
         BLOCKS.add(trinket_maker);
-
-        for(Block block: BLOCKS){
-            event.getRegistry().register(new ItemBlock(block));
+        for(Block block : BLOCKS){
+            event.getRegistry().register(block);
         }
     }
-*/
+
+    @SubscribeEvent
+    public static void registerItemBlocks(RegistryEvent.Register<Item> event){
+        ITEMBLOCKS.add(new ItemBlock(test_block));
+        ItemBlock ibtest_block = new ItemBlock(test_block);
+
+        ITEMBLOCKS.add(new ItemBlock(shard_ore_green));
+        ITEMBLOCKS.add(new ItemBlock(shard_ore_orange));
+        ITEMBLOCKS.add(new ItemBlock(shard_ore_purple));
+        ITEMBLOCKS.add(new ItemBlock(shard_ore_white));
+
+        ITEMBLOCKS.add(new ItemBlock(trinket_maker));
+
+        for(Item item: ITEMBLOCKS){
+            event.getRegistry().register(item);
+        }
+
+    }
 
     @SideOnly(Side.CLIENT)
     @SubscribeEvent
