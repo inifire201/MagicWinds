@@ -39,7 +39,6 @@ public class BlockHandler {
     public static Block trinket_maker = new BlockTrinketMaker(Material.WOOD, "trinket_maker", CreativeTabHandler.tabMW, 4f, 10f, 3,"axe", true);
 
 
-    //TODO Fix this, error: nullpointer exeption. added blocks are null.
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event){
         BLOCKS.add(test_block);
@@ -57,18 +56,9 @@ public class BlockHandler {
 
     @SubscribeEvent
     public static void registerItemBlocks(RegistryEvent.Register<Item> event){
-        ITEMBLOCKS.add(new ItemBlock(test_block));
-        ItemBlock ibtest_block = new ItemBlock(test_block);
 
-        ITEMBLOCKS.add(new ItemBlock(shard_ore_green));
-        ITEMBLOCKS.add(new ItemBlock(shard_ore_orange));
-        ITEMBLOCKS.add(new ItemBlock(shard_ore_purple));
-        ITEMBLOCKS.add(new ItemBlock(shard_ore_white));
-
-        ITEMBLOCKS.add(new ItemBlock(trinket_maker));
-
-        for(Item item: ITEMBLOCKS){
-            event.getRegistry().register(item);
+        for(Block block: BLOCKS){
+            event.getRegistry().register(new ItemBlock(block).setRegistryName(block.getRegistryName()));
         }
 
     }

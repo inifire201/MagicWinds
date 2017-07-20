@@ -1,5 +1,5 @@
 {
-  "type":"forge:ore_shaped",
+  "type":"minecraft:crafting_shaped",
   "pattern":[
     " X ",
     " X ",
@@ -10,11 +10,12 @@
       "item":"mw:test_item"
     },
     "I":{
-      "type": "forge:ore_dict",
-      "ore": "stickwood"
+      "item": "minecraft:stick"
     }
   },
   "result":{
-    "item": "mw:test_sword"
+    "item": "mw:test_sword",
+    "data":0,
+    "count":1
   }
 }

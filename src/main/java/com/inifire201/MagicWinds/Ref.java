@@ -12,8 +12,7 @@ public class Ref {
 
     //proxies
     public static final String CLIENT_PROXY = "com.inifire201.MagicWinds.proxy.ClientProxy";
-    public static final String SERVER_PROXY = "com.inifire201.MagicWinds.proxy.ServerProxy" +
-            "";
+    public static final String SERVER_PROXY = "com.inifire201.MagicWinds.proxy.ServerProxy";
 }
 /*
     Items:
