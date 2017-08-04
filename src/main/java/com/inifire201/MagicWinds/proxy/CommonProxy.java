@@ -1,6 +1,7 @@
 package com.inifire201.MagicWinds.proxy;
 
 
+import com.inifire201.MagicWinds.Handlers.MultiBlockHandler;
 import com.inifire201.MagicWinds.World.ModWorldGen;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -11,7 +12,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class CommonProxy implements IProxy {
     @Override
     public void preInit() {
-
+        MultiBlockHandler.register();
     }
 
     @Override

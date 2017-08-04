@@ -12,3 +12,7 @@ item.test_sword.name=Mistical Sword
 
 //Tabs
 itemGroup.mw= Magic Winds
+
+//Advancements
+advancements.story.shards.title=A Magical Beginning
+advancements.story.shards.description=Obtain one each of the four shards.

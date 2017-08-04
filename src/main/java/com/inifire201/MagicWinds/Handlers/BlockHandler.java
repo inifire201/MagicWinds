@@ -1,7 +1,9 @@
 package com.inifire201.MagicWinds.Handlers;
 
+import com.inifire201.MagicWinds.Blocks.BlockExtractorWind;
 import com.inifire201.MagicWinds.Blocks.BlockShardOre;
 import com.inifire201.MagicWinds.Blocks.BlockTestBlock;
+import com.inifire201.MagicWinds.MultiBlocks.BlockWindCatcher;
 import com.inifire201.MagicWinds.Ref;
 import com.inifire201.MagicWinds.TileEntities.BlockTrinketMaker;
 import net.minecraft.block.Block;
@@ -27,7 +29,6 @@ import java.util.List;
 @Mod.EventBusSubscriber(modid = Ref.MODID)
 public class BlockHandler {
     public static List<Block> BLOCKS = new ArrayList<Block>();
-    public static List<Item> ITEMBLOCKS = new ArrayList<Item>();
 
     public static Block test_block = new BlockTestBlock(Material.ROCK, "test_block", CreativeTabHandler.tabMW, 5f, 15f, 3, "pickaxe");
 
@@ -37,7 +38,8 @@ public class BlockHandler {
     public static Block shard_ore_purple = new BlockShardOre(Material.ROCK, "shard_ore_purple", CreativeTabHandler.tabMW, 4f, 10f, 2, "pickaxe" , ItemHandler.purpleShard, "purple");
 
     public static Block trinket_maker = new BlockTrinketMaker(Material.WOOD, "trinket_maker", CreativeTabHandler.tabMW, 4f, 10f, 3,"axe", true);
-
+    public static Block wind_catcher = new BlockWindCatcher(Material.WOOD, "wind_catcher", CreativeTabHandler.tabMW, 3f, 8f,1,"axe");
+    public static Block wind_extractor = new BlockExtractorWind(Material.WOOD, "wind_extractor", CreativeTabHandler.tabMW, 3f, 8f, 1,"axe");
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event){
@@ -49,6 +51,8 @@ public class BlockHandler {
         BLOCKS.add(shard_ore_white);
 
         BLOCKS.add(trinket_maker);
+        BLOCKS.add(wind_catcher);
+        BLOCKS.add(wind_extractor);
         for(Block block : BLOCKS){
             event.getRegistry().register(block);
         }

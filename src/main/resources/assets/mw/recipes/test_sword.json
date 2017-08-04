@@ -1,0 +1,21 @@
+{
+  "type":"minecraft:crafting_shaped",
+  "pattern":[
+    " X ",
+    " X ",
+    " I "
+  ],
+  "key":{
+    "X":{
+      "item":"mw:test_item"
+    },
+    "I":{
+      "item": "minecraft:stick"
+    }
+  },
+  "result":{
+    "item": "mw:test_sword",
+    "data":0,
+    "count":1
+  }
+}
